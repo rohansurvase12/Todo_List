@@ -1,0 +1,16 @@
+<div class="my-3">
+    <!-- <h5>{{title}}</h5>
+   <p>{{desc}}
+     <p> <button  class="btn btn-danger">Danger</button> -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"> <h5 [ngClass]="{'strike' : !todo.active}" >{{todo.title}}</h5> </div>
+                <div class="col-md-4"> <h5 [ngClass]="{'strike' : !todo.active}" >{{todo.Description}}</h5> </div>
+                <div class="col-md-4"> <button  class="btn btn-danger" (click)="onClick()">Delete</button> </div>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" (click)="onCheckbox()" [checked]="!todo.active">
+                <label class="form-check-label" for="exampleCheck1">Mark as Done</label>
+              </div>
+        </div>
+</div>
